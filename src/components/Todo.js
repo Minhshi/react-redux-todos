@@ -11,7 +11,7 @@ class Todo extends React.Component {
             {this.props.todo.completed ? "Status: Done" : "Status: Not Done"}
           </div>
           <div>
-            <User />
+            <User userId={this.props.todo.userId} />
           </div>
         </div>
       </div>
