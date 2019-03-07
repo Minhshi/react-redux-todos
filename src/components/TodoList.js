@@ -11,10 +11,12 @@ class TodoList extends React.Component {
   render() {
     return (
       <div>
-        Todo List
-        {this.props.todos.map(todo => {
-          return <Todo todo={todo} />;
-        })}
+        <div className="ui header">Todo List</div>
+        <div className="ui segment">
+          {this.props.todos.map(todo => {
+            return <Todo todo={todo} key={todo.id} />;
+          })}
+        </div>
       </div>
     );
   }
