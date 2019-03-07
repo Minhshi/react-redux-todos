@@ -9,11 +9,11 @@ export const fetchTodos = () => async dispatch => {
   });
 };
 
-export const fetchUser = (id) => async dispatch => {
-  const response = await jsonplaceholder.get(`/todos/${id}`)
+export const fetchUser = id => async dispatch => {
+  const response = await jsonplaceholder.get(`/todos/${id}`);
 
   dispatch({
     type: "FETCH_USER",
     payload: response.data
-  })
-}
+  });
+};
