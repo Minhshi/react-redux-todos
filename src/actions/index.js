@@ -5,6 +5,6 @@ export const fetchTodos = () => async dispatch => {
 
   dispatch({
     type: "FETCH_TODOS",
-    payload: response
+    payload: response.data
   });
 };
