@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchTodos } from "../actions";
+import Todo from "./Todo";
 
 class TodoList extends React.Component {
   componentDidMount() {
@@ -11,7 +12,9 @@ class TodoList extends React.Component {
     return (
       <div>
         Todo List
-        {console.log(this.props.todos)}
+        {this.props.todos.map(todo => {
+          return <Todo todo={todo} />;
+        })}
       </div>
     );
   }
